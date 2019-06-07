@@ -1,12 +1,12 @@
 beer-ready
-------------
+=========================
 
 This is a prototype to experiment with @dwp/govuk-casa project. 
 
 All the relevant changes are done in steps and in separate branches so that it's clear what changes went in to achieve certain functionality.
 
 Functionality background:
-=========================
+-------------------------
 
 This website runs you through simple list of questions to suggest you beers 
 
