@@ -36,6 +36,10 @@ const startApp = () => {
       secret: sessionSecret,
       ttl: 60 * 60,
       secure: false
+    },
+    i18n: {
+      dirs: [ path.resolve(__dirname, 'locales') ],
+      locales: [ 'en', 'cy' ]
     }
   });
 

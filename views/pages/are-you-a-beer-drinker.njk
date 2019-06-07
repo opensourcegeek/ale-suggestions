@@ -1,29 +1,32 @@
 {% extends "layouts/journey.njk" %}
 
-{% from "casa/components/radios/macro.njk" import casaGovukRadios %}
+{% from "casa/components/radios/macro.njk" import casaGovukRadios with context %}
 
 {% block journey_form %}
-  {{ casaGovukRadios({
-  name: 'drink-beer',
-  fieldset: {
-    legend: {
-      text: 'Are you a beer drinker?',
-      isPageHeading: true,
-      classes: 'govuk-fieldset__legend--xl'
-    }
-    },
-    items: [
-      { 
-        value: 'yes',
-        text: 'Yes'
+  {{ 
+    casaGovukRadios({
+      name: 'drinkBeer',
+      fieldset: {
+        legend: {
+          text: t('are-you-a-beer-drinker:main-header'),
+          isPageHeading: true,
+          classes: 'govuk-fieldset__legend--xl'
+        }
       },
-      { 
-        value: 'no',
-        text: 'No'
-      }
-    ]
-    
-  }) }}
+      items: [
+        { 
+          value: 'yes',
+          text: 'Yes'
+        },
+        { 
+          value: 'no',
+          text: 'No'
+        }
+      ],
+      casaValue: formData['drinkBeer'],
+      casaErrors: formErrors
+    }) 
+  }}
 {% endblock %}
  
 
