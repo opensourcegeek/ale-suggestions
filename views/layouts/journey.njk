@@ -8,8 +8,8 @@
   <div class="govuk-grid-column-two-thirds">
     {% if formErrorsGovukArray %}
       {{ govukErrorSummary({
-        titleText: "Something has gone wrong",
-        descriptionText: "Error description",
+        titleText: t("errors:errorSummary.header"),
+        descriptionText: t("errors:errorSummary.description"),
         errorList: formErrorsGovukArray
       }) }}
     {% endif %}
