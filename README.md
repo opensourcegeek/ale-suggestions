@@ -24,3 +24,7 @@ Following are the branches available for you to checkout and see changes for eac
 - step-1 : Prepare project
 - step-2 : Setup single page to select if you're an ale or lager drinker
 
+How to run:
+-----------
+
+`export "DEBUG=*" PORT=4000 node app.js`
