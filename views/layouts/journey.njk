@@ -1,0 +1,29 @@
+{% extends "casa/layouts/journey.njk" %}
+
+{% from "components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "casa/components/journey-form/macro.njk" import casaJourneyForm with context %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if formErrorsGovukArray %}
+      {{ govukErrorSummary({
+        titleText: "Something has gone wrong",
+        descriptionText: "Error description",
+        errorList: formErrorsGovukArray
+      }) }}
+    {% endif %}
+
+    {% call casaJourneyForm({
+      csrfToken: casa.csrfToken,
+      inEditMode: inEditMode,
+      editOriginUrl: editOriginUrl,
+      casaMountUrl: casa.mountUrl
+    }) %}
+      {% block journey_form %}{% endblock %}
+    {% endcall %}
+  </div>
+
+</div>
+
+{% endblock %}

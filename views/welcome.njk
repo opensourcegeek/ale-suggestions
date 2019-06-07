@@ -1,0 +1,24 @@
+{# If you need custom styling look at examples/barebones directory in govuk-casa repo #}
+{% extends "casa/layouts/main.njk" %}
+ 
+{% from "components/button/macro.njk" import govukButton %}
+
+{# This is handy to change page titles based on journey you are in #}
+{% block casaPageTitle %}
+  Are you ready for some beers?  
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">Welcome</h1>
+
+  <p class="govuk-body">This page helps you in choosing the beers according to your taste</p>
+
+  <p class="govuk-body">
+    {{ govukButton({
+      text: 'Start',
+      href: '/are-you-a-beer-drinker'
+    }) }}
+  </p>
+{% endblock %}
+
+
