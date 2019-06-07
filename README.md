@@ -21,8 +21,8 @@ On a high level,
 
 Following are the branches available for you to checkout and see changes for each step
 
-- step-1 : Prepare project
-- step-2 : Setup single page to select if you're an ale or lager drinker
+- step-1 : Prepare project and setup single page to select if you're beer drinker
+- step-2 : Add internationalization 
 
 How to run:
 -----------
