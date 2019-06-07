@@ -9,13 +9,13 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="govuk-heading-xl">Welcome</h1>
+  <h1 class="govuk-heading-xl">{{ t('welcome:header') }}</h1>
 
-  <p class="govuk-body">This page helps you in choosing the beers according to your taste</p>
+  <p class="govuk-body">{{ t('welcome:body-text') }}</p>
 
   <p class="govuk-body">
     {{ govukButton({
-      text: 'Start',
+      text: t('welcome:start'),
       href: '/are-you-a-beer-drinker'
     }) }}
   </p>
