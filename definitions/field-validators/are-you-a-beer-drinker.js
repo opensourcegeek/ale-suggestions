@@ -8,4 +8,4 @@ module.exports = {
       errorMsg: 'are-you-a-beer-drinker:is-empty'
     })
   ])
-}
+};
