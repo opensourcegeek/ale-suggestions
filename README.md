@@ -27,6 +27,10 @@ Following are the branches available for you to checkout and see changes for eac
 - step-2 : Add internationalization and validation to single page. 
            After this step, you should see additional translation files in locales directory and field-validators in definitions directory. When you run the app, and not select yes or no to the option you'd end up with error summary/description.
 
+- step-3 : Added fork in the page. If user selects not a beer drinker the journey ends, if not it proceeds with journey
+           After this step, you should see additional are-you-an-ale-drinker page if you select yes and if you select no it should take you to an end page
+
+
 How to run:
 -----------
 
