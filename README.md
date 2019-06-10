@@ -21,6 +21,13 @@ On a high level,
 
 Following are the branches available for you to checkout and see changes for each step
 
-- step-1 : Prepare project
-- step-2 : Setup single page to select if you're an ale or lager drinker
+- step-1 : Prepare project and setup single page to select if you're beer drinker
+           After this step, when you run the app, you must see a welcome page when you hit http://localhost:4000 (check port). From welcome page you can start journey by clicking on `Start` button. 
 
+- step-2 : Add internationalization and validation to single page. 
+           After this step, you should see additional translation files in locales directory and field-validators in definitions directory. When you run the app, and not select yes or no to the option you'd end up with error summary/description.
+
+How to run:
+-----------
+
+`export "DEBUG=*" PORT=4000 node app.js`
