@@ -1,0 +1,8 @@
+{
+  "main-header": "Are you an ale drinker?",
+  "is-empty": "You need to answer this question",
+  "drinkBeer": {
+    "yes": "Yes",
+    "no": "No"
+  }
+}

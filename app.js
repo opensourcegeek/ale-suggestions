@@ -13,6 +13,14 @@ const setupWelcomePage = router => {
   });
 }
 
+
+const endJourneyPage = router => {
+  router.get('/end', (req, res) => {
+    res.render('end.njk');
+  });
+
+}
+
 const startApp = () => {
   const sessionStore = new FileStore({
     path: path.resolve(__dirname, 'sessions'),
@@ -46,6 +54,7 @@ const startApp = () => {
   casaApp.loadDefinitions(require('./definitions/page')(), require('./definitions/journey')()); 
 
   setupWelcomePage(casaApp.router);
+  endJourneyPage(casaApp.router);
 
   app.listen(port, () => {
     console.log('App started on', port);
