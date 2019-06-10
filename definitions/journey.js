@@ -19,13 +19,12 @@ module.exports = () => {
     return choices[1];
   });
 
-  aleRoad.mergeWith(end);
+  //aleRoad.mergeWith(end);
 
-  end.addWaypoints([ '/end' ]);
+  end.addWaypoints([ '/end' ]).end();
 
   // do some forking
   let journey = new UserJourney.Map();
   journey.startAt(start);
-  end.end();
   return journey;
 }
