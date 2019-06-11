@@ -4,7 +4,7 @@ const r = Validation.rules;
 const sf = Validation.SimpleField;
 
 module.exports = {
-  'drinkAle': sf([
+  'aleDrinker': sf([
     r.required.bind({
       errorMsg: 'are-you-an-ale-drinker:is-empty'
     }),

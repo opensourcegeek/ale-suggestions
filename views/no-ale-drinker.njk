@@ -1,0 +1,22 @@
+{% extends "casa/layouts/main.njk" %}
+ 
+{% from "components/button/macro.njk" import govukButton %}
+{# This is handy to change page titles based on journey you are in #}
+{% block casaPageTitle %}
+  No ales!
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ t('no-ale-drinker:header') }}</h1>
+
+  <p class="govuk-body">{{ t('no-ale-drinker:body-text') }}</p>
+
+  <p class="govuk-body">
+    {{ govukButton({
+      text: t('no-ale-drinker:redirect'),
+      href: '/'
+    }) }}
+  </p>
+{% endblock %}
+
+

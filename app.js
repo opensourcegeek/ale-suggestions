@@ -13,12 +13,16 @@ const setupWelcomePage = router => {
   });
 }
 
-
 const endJourneyPage = router => {
   router.get('/end', (req, res) => {
     res.render('end.njk');
   });
+}
 
+const noAleDrinkerPage = router => {
+  router.get('/no-ale-drinker', (req, res) => {
+    res.render('no-ale-drinker.njk');
+  });
 }
 
 const startApp = () => {
@@ -55,6 +59,7 @@ const startApp = () => {
 
   setupWelcomePage(casaApp.router);
   endJourneyPage(casaApp.router);
+  noAleDrinkerPage(casaApp.router);
 
   app.listen(port, () => {
     console.log('App started on', port);

@@ -1,0 +1,11 @@
+{
+  "hops": {
+    "options": {
+      "citra": "Citra",
+      "chinook": "Chinook",
+      "fuggle": "Fuggle",
+      "saaz": "Saaz"
+    },
+    "label": "Choose your hops"
+  }
+}

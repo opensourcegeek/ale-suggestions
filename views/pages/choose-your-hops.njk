@@ -1,0 +1,47 @@
+{% extends "layouts/journey.njk" %}
+
+{% from "casa/components/checkboxes/macro.njk" import casaGovukCheckboxes with context %}
+
+{% block casaPageTitle %}
+  {{ t('choose-your-hops:pageTitle') }}
+{% endblock %}
+
+{% block journey_form %}
+  {{ casaGovukCheckboxes({
+    name: "hops",
+    casaErrors: formErrors,
+    fieldset: {
+      legend: {
+        text: t('choose-your-hops:hops.label'),
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--xl"
+      }
+    },
+    hint: {
+      text: t('choose-your-hops:hops.hint')
+    },
+    items: [{
+      value: "citra",
+      text: "Citra",
+      checked: true if includes(formData.hops, "citra") else false
+    },{
+      value: "chinook",
+      text: "Chinook",
+      checked: true if includes(formData.hops, "chinook") else false
+    }, {
+      value: "fuggle",
+      text: "Fuggle",
+      checked: true if includes(formData.hops, "fuggle") else false
+    }, {
+      value: "saaz",
+      text: "Saaz",
+      checked: true if includes(formData.hops, "saaz") else false
+    }]
+  }) }}
+
+  <p class="govuk-body">
+    If you require help choosing the hops, please visit <a href='#'> manual </a>
+  </p>
+
+{% endblock %}
+
