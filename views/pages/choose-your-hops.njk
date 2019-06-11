@@ -20,24 +20,8 @@
     hint: {
       text: t('choose-your-hops:hops.hint')
     },
-    items: [{
-      value: "citra",
-      text: "Citra",
-      checked: true if includes(formData.hops, "citra") else false
-    },{
-      value: "chinook",
-      text: "Chinook",
-      checked: true if includes(formData.hops, "chinook") else false
-    }, {
-      value: "fuggle",
-      text: "Fuggle",
-      checked: true if includes(formData.hops, "fuggle") else false
-    }, {
-      value: "saaz",
-      text: "Saaz",
-      checked: true if includes(formData.hops, "saaz") else false
-    }]
-  }) }}
+    items: allHops 
+    }) }}
 
   <p class="govuk-body">
     If you require help choosing the hops, please visit <a href='#'> manual </a>

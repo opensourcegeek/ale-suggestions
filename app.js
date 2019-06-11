@@ -25,6 +25,12 @@ const noAleDrinkerPage = router => {
   });
 }
 
+const errorPage = router => {
+  router.get('/error', (req, res) => {
+    res.render('error.njk');
+  });
+}
+
 const startApp = () => {
   const sessionStore = new FileStore({
     path: path.resolve(__dirname, 'sessions'),
