@@ -16,7 +16,6 @@ module.exports = () => {
         prerender: async (_, res, next) => {
           try {
             const allHops = await getAllHopsAsync();
-            console.log('', res.locals.t);
             res.locals.allHops = allHops.map(x => {
               return {
                 value: x,
@@ -60,8 +59,8 @@ const getAllHopsAsync = async () => {
 const delay = delayInMillis => {
   return new Promise((res, rej) => {
     setTimeout(() => {
-      //res(); 
-      rej();
+      res(); 
+      //rej();
     }, delayInMillis);
   });
 }
