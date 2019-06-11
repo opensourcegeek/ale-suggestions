@@ -47,7 +47,7 @@ const startApp = () => {
       dirs: [ path.resolve(__dirname, 'views') ]
     },
     compiledAssetsDir: path.resolve(__dirname, 'static'),
-    serviceName: 'Are you ready for a beer',
+    serviceName: 'Ale suggestions',
     sessions: {
       store: sessionStore,
       name: 'myappsessionid',

@@ -13,26 +13,23 @@ module.exports = () => {
       view: 'pages/choose-your-hops',
       fieldValidators: require('./field-validators/choose-your-hops'),
       hooks: {
-        prerender: async (req, res, next) => {
+        prerender: async (_, res, next) => {
           try {
-            const allHops = await getAllHops();
+            const allHops = await getAllHopsAsync();
+            console.log('', res.locals.t);
             res.locals.allHops = allHops.map(x => {
               return {
                 value: x,
-                text: x, // TODO: possibly use translate directly from here?
-                // checked: true/false - may be we could look up data in session at this point directly???
+                text: x
               };
             });
-            console.log(res.local.allHops);
-
             next();
 
           } catch(e) {
-            console.log(e);
+            console.error(e);
             //res.render('error.njk');
             next();
           }
-
         }
       }
     }
@@ -51,38 +48,21 @@ const getAllHops = () => {
 
 const getAllHopsAsync = async () => {
   await delay(1000);
-  console.log('returning');
   return Promise.resolve([
     'chinook',
     'citra',
     'saag',
     'fuggle'
   ]);
+  
 }
 
 const delay = delayInMillis => {
-  return new Promise((_, res) => {
-    setTimeout(() => res(), delayInMillis);
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      //res(); 
+      rej();
+    }, delayInMillis);
   });
 }
 
-/*
- [{
-      value: "citra",
-      text: "Citra",
-      checked: true if includes(formData.hops, "citra") else false
-    },{
-      value: "chinook",
-      text: "Chinook",
-      checked: true if includes(formData.hops, "chinook") else false
-    }, {
-      value: "fuggle",
-      text: "Fuggle",
-      checked: true if includes(formData.hops, "fuggle") else false
-    }, {
-      value: "saaz",
-      text: "Saaz",
-      checked: true if includes(formData.hops, "saaz") else false
-    }]
-
- * */
