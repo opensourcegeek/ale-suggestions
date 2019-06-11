@@ -30,6 +30,10 @@ Following are the branches available for you to checkout and see changes for eac
 - step-3 : Added fork in the page. If user selects not a beer drinker the journey ends, if not it proceeds with journey
            After this step, you should see additional are-you-an-ale-drinker page if you select yes and if you select no it should take you to an end page
 
+- step-4 : Added fork in the beer drinker journey. User gets an ale drinker or not question and if user selects not an ale drinker the journey ends, if not it proceeds with journey asking user to choose the hops they prefer
+           After this step, you should see additional choose-your-hops page if you select yes and if you select no it should take you to no-ale-drinker page
+
+
 
 How to run:
 -----------
