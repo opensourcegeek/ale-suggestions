@@ -33,6 +33,8 @@ Following are the branches available for you to checkout and see changes for eac
 - step-4 : Added fork in the beer drinker journey. User gets an ale drinker or not question and if user selects not an ale drinker the journey ends, if not it proceeds with journey asking user to choose the hops they prefer
            After this step, you should see additional choose-your-hops page if you select yes and if you select no it should take you to no-ale-drinker page
 
+- step-5 : Added dynamic (async) data load using prerender hook. This is a handy way to do API calls if you need to prepopulate some components like dropdown box or checkbox. 
+           After this step, you should see no difference in UI but in the background the way checkboxes for hops list is added dynamically. 
 
 
 How to run:
