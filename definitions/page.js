@@ -14,6 +14,7 @@ module.exports = () => {
       fieldValidators: require('./field-validators/choose-your-hops'),
       hooks: {
         prerender: async (_, res, next) => {
+          // NB: Below async call is a stub and it mimics a promise based API call which will always resolve.
           try {
             const allHops = await getAllHopsAsync();
             res.locals.allHops = allHops.map(x => {
@@ -25,9 +26,9 @@ module.exports = () => {
             next();
 
           } catch(e) {
+            // NB: If there was an error with API calls, return a generic error page to user (in compliance with GDS error pages)
             console.error(e);
-            //res.render('error.njk');
-            next();
+            res.render('error.njk');
           }
         }
       }
