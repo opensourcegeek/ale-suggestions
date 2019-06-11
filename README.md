@@ -1,4 +1,4 @@
-beer-ready
+ale-suggestions
 =========================
 
 This is a prototype to experiment with @dwp/govuk-casa project. 
