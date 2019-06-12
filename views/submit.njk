@@ -1,0 +1,35 @@
+
+{# If you need custom styling look at examples/barebones directory in govuk-casa repo #}
+{% extends "casa/layouts/main.njk" %}
+ 
+{% from "components/button/macro.njk" import govukButton %}
+
+{# This is handy to change page titles based on journey you are in #}
+{% block casaPageTitle %}
+  Ale suggestions
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ t('submit:header') }}</h1>
+
+  <p class="govuk-body">{{ t('submit:body-text') }}</p>
+  
+  <p class="govuk-body">
+    Below is the list of beers with hops you'd selected
+    <ul>
+      <li>Northern Alchemy Table beer</li>
+      <li>Wylam Table beer</li>
+      <li>Kernel Table beer</li>
+      <li>Hickey the Rake</li>
+    </ul>
+  </p>
+
+  <p class="govuk-body">
+    {{ govukButton({
+      text: t('submit:go-to-start'),
+      href: '/'
+    }) }}
+  </p>
+{% endblock %}
+
+

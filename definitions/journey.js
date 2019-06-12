@@ -6,6 +6,7 @@ module.exports = () => {
   let earlyEnd = new UserJourney.Road();
   let noAleDrinkerEnd = new UserJourney.Road();
   let aleDrinkerRoad = new UserJourney.Road();
+  let endOfJourney = new UserJourney.Road();
 
   start.addWaypoints([
     'are-you-a-beer-drinker',
@@ -31,6 +32,11 @@ module.exports = () => {
   aleDrinkerRoad.addWaypoints([
     'choose-your-hops'
   ]);
+
+  aleDrinkerRoad.mergeWith(endOfJourney);
+
+  endOfJourney.addWaypoints(['/submit']);
+  endOfJourney.end();
 
   earlyEnd.addWaypoints([ '/end' ]).end();
   noAleDrinkerEnd.addWaypoints([ '/no-ale-drinker' ]).end();

@@ -19,6 +19,12 @@ const endJourneyPage = router => {
   });
 }
 
+const endOfJourneyPage = router => {
+  router.get('/submit', (req, res) => {
+    res.render('submit.njk');
+  });
+}
+
 const noAleDrinkerPage = router => {
   router.get('/no-ale-drinker', (req, res) => {
     res.render('no-ale-drinker.njk');
@@ -66,6 +72,8 @@ const startApp = () => {
   setupWelcomePage(casaApp.router);
   endJourneyPage(casaApp.router);
   noAleDrinkerPage(casaApp.router);
+  errorPage(casaApp.router);
+  endOfJourneyPage(casaApp.router);
 
   app.listen(port, () => {
     console.log('App started on', port);
