@@ -36,6 +36,9 @@ Following are the branches available for you to checkout and see changes for eac
 - step-5 : Added dynamic (async) data load using prerender hook. This is a handy way to do API calls if you need to prepopulate some components like dropdown box or checkbox. 
            After this step, you should see no difference in UI but in the background the way checkboxes for hops list is added dynamically. 
 
+- step-6 : Added final submit page and enabled generic error page.
+           After this step, you should get a final submit page which shows list of ales that suit your hops selection from previous page.
+
 
 How to run:
 -----------
