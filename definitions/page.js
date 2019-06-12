@@ -13,7 +13,7 @@ module.exports = () => {
       view: 'pages/choose-your-hops',
       fieldValidators: require('./field-validators/choose-your-hops'),
       hooks: {
-        prerender: async (_, res, next) => {
+        prerender: async (req, res, next) => {
           // NB: Below async call is a stub and it mimics a promise based API call which will always resolve.
           try {
             const allHops = await getAllHopsAsync();
